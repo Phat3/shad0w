@@ -20,11 +20,6 @@
 
 #define PROC_THREAD_ATTRIBUTE_MITIGATION_POLICY ProcThreadAttributeValue(7, FALSE, TRUE, FALSE)
 
-typedef struct _STARTUPINFOEXA {
-  STARTUPINFOA                 StartupInfo;
-  LPPROC_THREAD_ATTRIBUTE_LIST lpAttributeList;
-} STARTUPINFOEXA, *LPSTARTUPINFOEXA;
-
 typedef void (WINAPI * RtlGetVersion_) (OSVERSIONINFOEXW *);
 
 LPCWSTR* BeaconCallbackC2(

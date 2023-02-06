@@ -46,11 +46,6 @@ typedef struct _UNICODE_STRING {
   PWSTR  Buffer;
 } UNICODE_STRING, *PUNICODE_STRING;
 
-typedef struct _STARTUPINFOEXA {
-  STARTUPINFOA                 StartupInfo;
-  LPPROC_THREAD_ATTRIBUTE_LIST lpAttributeList;
-} STARTUPINFOEXA, *LPSTARTUPINFOEXA;
-
 NTSTATUS __stdcall _LdrLoadDll(PWSTR SearchPath OPTIONAL, PULONG DllCharacteristics OPTIONAL, PUNICODE_STRING DllName, PVOID *BaseAddress);
 
 typedef void (WINAPI * LdrLoadDll_) (PWSTR SearchPath OPTIONAL,
